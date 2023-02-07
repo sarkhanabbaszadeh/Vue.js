@@ -6,12 +6,14 @@
     <body>
         <div id="app">
             {{message}}
+        <h2>{{message2}}</h2>
         </div>
         <script>
             var prog = new Vue({
                 el:"#app", //html element
                 data:{
-                    message:"Hello Vue!"
+                    message:"Hello Vue!",
+                    message2:"Vue is a great framework :)"
                 }
             });
         </script>
