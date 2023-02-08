@@ -9,6 +9,12 @@
             <br/>
             <input type="text" v-model="userComment">
         <h2>{{userComment}}</h2>
+
+        <ul>
+            <li v-for="comment in userComments">
+                {{comment}}
+            </li>
+        </ul>
         </div>
         <script>
             var prog = new Vue({
@@ -16,7 +22,12 @@
                 data:{
                     message:"Hello Vue!",
                     message2:"Vue is a great framework :)",
-                    userComment:"Vue is a great framework :)))"
+                    userComment:"Vue is a great framework :)))",
+                    userComments:[
+                        'Vue is great',
+                        'Vue is easy to learn',
+                        'I love Vue'
+                    ]
                 }
             });
         </script>
