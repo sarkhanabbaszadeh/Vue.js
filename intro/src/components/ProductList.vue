@@ -2,7 +2,7 @@
     <div>
         <h3>-- Product List --</h3>
         <p v-if="products.length==0">Product List is empty</p>
-        <table class="table">
+        <table v-else class="table">
             <thead>
                 <tr>
                     <th>Id</th>
