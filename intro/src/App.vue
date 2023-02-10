@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld :msg="54"/>
   <div id="app">
-    <ProductList @delete:product="deleteProduct" :products="products" />
+    <ProductList @delete:product="deleteProduct" @update:product="updateProduct" :products="products" />
   </div>
 </template>
 
@@ -29,6 +29,9 @@ export default {
       this.products=this.products.filter(
         productToFilter=>productToFilter.id!==product.id
       )
+    },
+    updateProduct(){
+
     }
   }
 }

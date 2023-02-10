@@ -29,12 +29,12 @@
                     <td v-if="updateId==product.id"><input v-model="product.unitInStock" type="text" class="form-control" id="id"></td>
                     <td v-else>{{ product.unitInStock }}</td>
                     <td v-if="updateId!==product.id">
-                        <button class="btn btn-sm btn-primary" @click="handleUpdate(product)">Edit</button>
+                        <button class="btn btn-sm btn-primary" @click="handleEdit(product)">Edit</button>
                         <button class="btn btn-sm btn-danger" @click="handleDelete(product)">Delete</button>
                     </td>
                     <td v-else>
                         <button class="btn btn-sm btn-primary" @click="handleUpdate(product)">Update</button>
-                        <button class="btn btn-sm btn-danger" @click="handleDelete(product)">Cancel Update</button>
+                        <button class="btn btn-sm btn-danger" @click="updateId=null">Cancel Update</button>
                     </td>
                 </tr>
             </tbody>
@@ -55,9 +55,14 @@ export default {
         handleDelete(product){
             this.$emit("delete:product",product)
         },
-        handleUpdate(product){
+        handleEdit(product){
             this.updateId=product.id
+        },
+        handleUpdate(product){
+            this.$emit("update:product",product)
+            this.updateId=null
         }
+
     }
 };
 </script>
