@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="list">
         <h3>-- Product List --</h3>
         <p v-if="products.length==0">Product List is empty</p>
         <table v-else class="table">
@@ -68,5 +68,7 @@ export default {
 </script>
 
 <style scoped>
-
+#list{
+    margin: 100px;
+}
 </style>

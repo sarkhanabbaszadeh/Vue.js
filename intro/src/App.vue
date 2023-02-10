@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld :msg="54"/>
   <div id="app">
+    <ProductAdd @add:product="addProduct"/>
     <ProductList @delete:product="deleteProduct" @update:product="updateProduct" :products="products" />
   </div>
 </template>
@@ -9,11 +10,12 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ProductList from './components/ProductList.vue';
+import ProductAdd from './components/ProductAdd.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,ProductList
+    HelloWorld,ProductList,ProductAdd
   },
   data(){
     return {
@@ -32,6 +34,10 @@ export default {
     },
     updateProduct(){
 
+    },
+    addProduct(product){
+      const newProduct={...product} // new reference
+      this.products={...this.products,newProduct}
     }
   }
 }
@@ -42,7 +48,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
