@@ -11,6 +11,7 @@
                     <th>Description</th>
                     <th>Unit Price</th>
                     <th>Unit in Stock</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                     <td>{{product.queantityPerUnit}}</td>
                     <td>{{product.unitPrice}}</td>
                     <td>{{product.unitInStock}}</td>
+                    <td><button class="btn btn-sm btn-danger" @click="handleDelete(product)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
@@ -32,6 +34,11 @@ export default {
     name: "product-list",
     props:{
         products:Array
+    },
+    methods:{
+        handleDelete(product){
+            this.$emit("delete:product",product)
+        }
     }
 };
 </script>

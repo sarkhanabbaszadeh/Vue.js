@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld :msg="54"/>
   <div id="app">
-    <ProductList :products="products"/>
+    <ProductList @delete:product="deleteProduct" :products="products" />
   </div>
 </template>
 
@@ -22,6 +22,13 @@ export default {
         {id:2,categoryId:2,productName:'Maouse',queantityPerUnit:'Gaming Maouse',unitPrice:600,unitInStock:3},
         {id:3,categoryId:3,productName:'Keyboard',queantityPerUnit:'Gaming Keyboard',unitPrice:78,unitInStock:5},
       ]
+    }
+  },
+  methods:{
+    deleteProduct(product){
+      this.products=this.products.filter(
+        productToFilter=>productToFilter.id!==product.id
+      )
     }
   }
 }
