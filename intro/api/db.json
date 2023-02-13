@@ -1,12 +1,53 @@
 {
-    "products":[
-        {"id":1,"categoryId":1,"productName":"New Laptop","queantityPerUnit":"Acer Laptop","unitPrice":5000,"unitInStock":2},
-        {"id":1,"categoryId":2,"productName":"New Maouse","queantityPerUnit":"Gaming Maouse","unitPrice":600,"unitInStock":3},
-        {"id":1,"categoryId":3,"productName":"New Keyboard","queantityPerUnit":"Gaming Keyboard","unitPrice":78,"unitInStock":5}
-    ],
-    "categories":[
-        {"id":1,"categoryName":"Laptop","seoUrl":"PC"},
-        {"id":2,"categoryName":"Maouse","seoUrl":"PC"},
-        {"id":3,"categoryName":"Keyboard","seoUrl":"PC"}
-    ]
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "productName": "New Laptop",
+      "quantityPerUnit": "Acer Laptop",
+      "unitPrice": 5000,
+      "unitsInStock": 2
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "productName": "New Maouse",
+      "quantityPerUnit": "Gaming Maouse",
+      "unitPrice": 600,
+      "unitsInStock": 3
+    },
+    {
+      "id": 3,
+      "categoryId": 3,
+      "productName": "New Keyboard",
+      "quantityPerUnit": "Gaming Keyboard",
+      "unitPrice": 78,
+      "unitsInStock": 5
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "productName": "Asus Laptop New",
+      "quantityPerUnit": "Gaming Laptop",
+      "unitPrice": 2500,
+      "unitsInStock": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Laptop",
+      "seoUrl": "PC"
+    },
+    {
+      "id": 2,
+      "categoryName": "Maouse",
+      "seoUrl": "PC"
+    },
+    {
+      "id": 3,
+      "categoryName": "Keyboard",
+      "seoUrl": "PC"
+    }
+  ]
 }

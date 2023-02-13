@@ -23,11 +23,11 @@
                     <td v-if="updateId==product.id"><input v-model="product.categoryId" type="text" class="form-control" id="id"></td>
                     <td v-else>{{ product.categoryId }}</td>
                     <td v-if="updateId==product.id"><input v-model="product.queantityPerUnit" type="text" class="form-control" id="id"></td>
-                    <td v-else>{{ product.queantityPerUnit }}</td>
+                    <td v-else>{{ product.quantityPerUnit }}</td>
                     <td v-if="updateId==product.id"><input v-model="product.unitPrice" type="text" class="form-control" id="id"></td>
                     <td v-else>{{ product.unitPrice }}</td>
                     <td v-if="updateId==product.id"><input v-model="product.unitInStock" type="text" class="form-control" id="id"></td>
-                    <td v-else>{{ product.unitInStock }}</td>
+                    <td v-else>{{ product.unitsInStock }}</td>
                     <td v-if="updateId!==product.id">
                         <button class="btn btn-sm btn-primary" @click="handleEdit(product)">Edit</button>
                         <button class="btn btn-sm btn-danger" @click="handleDelete(product)">Delete</button>

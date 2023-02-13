@@ -14,7 +14,7 @@
                 <input v-model="product.productName" type="text" class="form-control" id="productName">
             </div>
             <div class="form-group">
-                <label for="quantityPerUnit">Quantity Per Unit</label>
+                <label for="quantityPerUnit">Description</label>
                 <input v-model="product.quantityPerUnit" type="text" class="form-control" id="quantityPerUnit">
             </div>
             <div class="form-group">
